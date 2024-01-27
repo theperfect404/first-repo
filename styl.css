@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.hero_image {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    background-color: red;
+
+    animation: name duration timing-function delay iteration-count direction fill-mode;
+    animation-name: fade;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    /* animation-delay: 0.5s; */
+    /* animation-iteration-count: infinite or number; */
+    /* animation-direction: reverse; */
+    /* animation-fill-mode: backwards; */
+}
+img {
+    display: block;
+}
+@keyframes fade {
+    0%{
+        transform: translateX(-30%);
+        opacity: 0;
+    }
+    50% {
+        transform: translateX(100%);
+        /* opacity: 100%; */
+    }
+    100%{
+        transform: translateX(0%);
+        opacity: 100%;
+        border-radius: 30px;
+    }
+}
+.title {
+    position: absolute;
+    bottom: -12px;
+    transition: bottom 0.2s ease-in-out;
+    color: #fff;
+}
+.hero_image:hover .title {
+    bottom: 10px;
+}
+p{
+    padding: 7px 0px;
+}
